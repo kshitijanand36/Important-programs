@@ -33,28 +33,6 @@ string s1 , s2;
 
 int fin_ans = 0;
 
-bool dp[201][210][201];
-
-void func(int curr1 , int curr2 , int length){
-
-    if((curr1 == sz(s1)) || (curr2 == sz(s2))){
-        fin_ans = max(fin_ans , length);
-        return;
-    }
-
-    fin_ans = max(fin_ans , length);
-    if(dp[curr1][curr2][length]) return;
-
-    if(s1[curr1] == s2[curr2]){
-
-        func(curr1 + 1 , curr2 + 1 , length + 1);
-    }
-
-    func(curr1 + 1 , curr2 , 0);
-    func(curr1 , curr2+ 1 , 0);
-
-    dp[curr1][curr2][length] = true;
-}
 
 void solve(){
 
@@ -62,14 +40,28 @@ void solve(){
     int m ; 
     cin>>n>>m;
 
+    int dp[201][210] = {} ;
     cin>>s1>>s2;
 
     fin_ans = 0;
-    fill(dp , false);
+   
 
-    func(0 , 0 ,0);
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<m; j++) {
 
-    cout<<fin_ans<<endl;
+            if(s1[i] == s2[j]){
+                if(i>=1&&j>=1)
+                dp[i][j] =  1 + dp[i - 1][j - 1];
+                else{
+                    dp[i][j] = 1;
+                }
+
+            }
+            ans = max(dp[i][j] , ans);
+        }
+    }
+
+    cout<<ans<<endl;
 
 }
 
