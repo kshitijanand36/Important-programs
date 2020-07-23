@@ -50,11 +50,8 @@ void func(int curr1 , int curr2 , int length){
         func(curr1 + 1 , curr2 + 1 , length + 1);
     }
 
-    // else{
-
-        func(curr1 + 1 , curr2 , 0);
-        func(curr1 , curr2+ 1 , 0);
-    // }
+    func(curr1 + 1 , curr2 , 0);
+    func(curr1 , curr2+ 1 , 0);
 
     dp[curr1][curr2][length] = true;
 }
