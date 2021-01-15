@@ -61,17 +61,7 @@ void solve(){
 
     int n,a,b,c,k,m, ans=0, count=0, sum=0;
     cin>>n;
-
-	// dp[0][1] = 1;
-	// dp[0][0] = 1;
-
-
-	// dp[2][1] = 4;
-	// dp[1][0] = 4;
-
-	cout<<(dp[n][0]%N + dp[n][1]%N)%N<<endl;
-
-    // cout<<func(n )<<endl;
+    cout<<(dp[n][0]%N + dp[n][1]%N)%N<<endl;
       
 }
 
