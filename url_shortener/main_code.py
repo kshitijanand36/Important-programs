@@ -1,6 +1,6 @@
 import bitly_api
 
-Access_token = "548bf7c66df07ba9054d9df5d1f50ee1f7a950be"
+Access_token = "" # hidden
 
 connection= bitly_api.Connection(access_token = Access_token)
 
