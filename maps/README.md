@@ -1,4 +1,5 @@
-# Created my  own hashmap class
+# Hashmap
+## Created my  own hashmap class
 
 ### Functions:-
 <ul>
