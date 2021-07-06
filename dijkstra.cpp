@@ -1,16 +1,4 @@
 #include <bits/stdc++.h>
-#include<iostream>
-#include<stdio.h>
-#include<algorithm>
-#include<math.h>
-#include<stack>
-#include<queue>
-#include<list>
-#include<vector>
-#include<bitset>
-// #include < unordered_map > 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 
 using namespace std;
 
@@ -64,16 +52,10 @@ struct Graph{
 
         while(!pq.empty()){
             T node=(pq.top()).S;
-            // cout<<adjlist[node].size(); 
             visited[node]=true;
-            // cout<<node;
             for(int i=0;i<adjlist[node].size();i++){
-                // cout<<adjlist[node][i].F<<" ";
-                // cout<<min_dist[node]<<" ";
-                // cout<<min_dist[adjlist[node][i].S]<<endl;
                 if(!visited[adjlist[node][i].S]&&(adjlist[node][i].F + min_dist[node])<min_dist[adjlist[node][i].S]){
                      min_dist[adjlist[node][i].S] = adjlist[node][i].F + min_dist[node];
-                    //  shortest_dist+=min_dist[adjlist[node][i].S];
                     pq.push(make_pair(min_dist[adjlist[node][i].S],adjlist[node][i].S));
                 }
             }
