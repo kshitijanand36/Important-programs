@@ -1,16 +1,5 @@
 #include <bits/stdc++.h>
-#include<iostream>
-#include<stdio.h>
-#include<algorithm>
-#include<math.h>
-#include<stack>
-#include<queue>
-#include<list>
-#include<vector>
-#include<bitset>
-#include <unordered_map> 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
+
 
 using namespace std;
 
@@ -23,13 +12,6 @@ using namespace std;
 const int N = 100005;
 
 
-// bool comp(Edge a,Edge b){
-
-//     if(a.weight==b.weight)  return a.v1<b.v1;
-
-//     return a.weight<b.weight;
-// }
-
 class Edge{
     public:
     int src;
@@ -38,7 +20,6 @@ class Edge{
 };
 
 struct table{
-    // public:
     int parent;
     bool visited;
     int weight;
