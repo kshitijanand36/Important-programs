@@ -7,7 +7,7 @@ class solution{
 	    
 	    vector<long long>dis(n + 1 , INT_MAX);
 	    dis[0] = 0;
-	    
+	    //run this for n-1 times as it is the no. of edges in the shortest path which covers all vertex
 	    for(int i = 0 ;i<n-1 ; i++){
 	        
 	        for(int j = 0 ;j<edges.size() ; j++){
