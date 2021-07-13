@@ -1,4 +1,6 @@
 class solution{
+	
+  public:	
   
   int isNegativeWeightCycle(int n, vector<vector<int>>edges){
 	    // Code here
